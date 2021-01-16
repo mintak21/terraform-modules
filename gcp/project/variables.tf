@@ -4,7 +4,7 @@ variable "name" {
 }
 
 variable "billing_account_id" {
-  type = string
+  type        = string
   description = "請求先アカウントID"
 }
 
