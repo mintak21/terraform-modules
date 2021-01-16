@@ -1,7 +1,6 @@
 variable "cluster_name" {
   type        = string
-  description = "サービス名"
-  default     = "mintaklinebot"
+  description = "クラスタ名"
 }
 
 variable "machine_type" {
