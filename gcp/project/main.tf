@@ -18,10 +18,10 @@ resource "google_project_default_service_accounts" "this" {
 
 ## setup APIs
 resource "google_project_service" "this" {
-  count = length(var.enable_services)
+  for_each = var.enable_services
 
   project                    = google_project.this.project_id
-  service                    = var.enable_services[count.index]
+  service                    = each.value
   disable_dependent_services = true
   disable_on_destroy         = false
 
