@@ -10,7 +10,7 @@ variable "billing_account_id" {
 
 variable "enable_services" {
   type        = list(string)
-  description = "接続許可するIPアドレスリスト"
+  description = "有効にするAPIサービスリスト"
   default = [
     "iam.googleapis.com",               # Identity and Access Management (IAM) API
     "storage-component.googleapis.com", # Cloud Storage API
