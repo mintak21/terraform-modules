@@ -17,6 +17,7 @@ variable "enable_services" {
     "compute.googleapis.com",           # Compute Engine API
     "cloudbuild.googleapis.com",        # Cloud Build API
     "container.googleapis.com",         # Kubernetes Engine API
+    "cloudbilling.googleapis.com",      # Cloud Billing API
     "billingbudgets.googleapis.com",    # Cloud Billing Budget API
   ]
 }
