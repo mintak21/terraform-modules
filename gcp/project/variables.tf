@@ -9,7 +9,7 @@ variable "billing_account_id" {
 }
 
 variable "enable_services" {
-  type        = list(string)
+  type        = set(string)
   description = "有効にするAPIサービスリスト"
   default = [
     "iam.googleapis.com",               # Identity and Access Management (IAM) API
