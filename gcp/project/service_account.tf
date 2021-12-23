@@ -15,7 +15,7 @@ resource "google_service_account_iam_member" "github_actions" {
   project            = google_project.this.project_id
   service_account_id = google_service_account.github_actions.name
   role               = "roles/iam.workloadIdentityUser"
-  member             = "principalSet://iam.googleapis.com/${google_iam_workload_identity_pool.github.id}/attribute.repository/${var.authorize_repository}"
+  member             = "principalSet://iam.googleapis.com/${google_iam_workload_identity_pool.github.id}/attribute.owner/${var.authorize_github_owner}"
 }
 
 resource "google_project_default_service_accounts" "this" {

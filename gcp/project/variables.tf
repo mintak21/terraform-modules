@@ -8,6 +8,11 @@ variable "billing_account_id" {
   description = "請求先アカウントID"
 }
 
+variable "authorize_github_owner" {
+  type        = string
+  description = "Workload Identity Poolで紐付けを許可するGithubのオーナー"
+}
+
 variable "additional_enable_services" {
   type        = set(string)
   description = "追加で有効にするAPIサービスリスト"
