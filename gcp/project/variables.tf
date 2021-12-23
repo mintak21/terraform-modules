@@ -8,16 +8,8 @@ variable "billing_account_id" {
   description = "請求先アカウントID"
 }
 
-variable "enable_services" {
+variable "additional_enable_services" {
   type        = set(string)
-  description = "有効にするAPIサービスリスト"
-  default = [
-    "iam.googleapis.com",               # Identity and Access Management (IAM) API
-    "storage-component.googleapis.com", # Cloud Storage API
-    "compute.googleapis.com",           # Compute Engine API
-    "cloudbuild.googleapis.com",        # Cloud Build API
-    "container.googleapis.com",         # Kubernetes Engine API
-    "cloudbilling.googleapis.com",      # Cloud Billing API
-    "billingbudgets.googleapis.com",    # Cloud Billing Budget API
-  ]
+  description = "追加で有効にするAPIサービスリスト"
+  default = []
 }
