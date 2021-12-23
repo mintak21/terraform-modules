@@ -8,7 +8,7 @@ resource "google_service_account" "github_actions" {
 resource "google_project_iam_member" "github_actions" {
   project = google_project.this.project_id
   role    = "roles/editor" // FIXME 本来は個別に権限をふるべき
-  member  = "ServiceAccount:${google_service_account.github_actions.email}"
+  member  = "serviceAccount:${google_service_account.github_actions.email}"
 }
 
 resource "google_service_account_iam_member" "github_actions" {
