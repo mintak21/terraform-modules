@@ -8,9 +8,9 @@ output "service_account_github_actions_email" {
   value       = google_service_account.github_actions.email
 }
 
-output "iam_workload_identity_pool_github_id" {
+output "iam_workload_identity_pool_github_name" {
   description = "Workload Identity Pood ID"
-  value       = google_iam_workload_identity_pool.github.id
+  value       = google_iam_workload_identity_pool.github.name
 }
 
 output "google_iam_workload_identity_pool_provider_github_id" {
