@@ -13,7 +13,7 @@ output "iam_workload_identity_pool_github_name" {
   value       = google_iam_workload_identity_pool.github.name
 }
 
-output "google_iam_workload_identity_pool_provider_github_id" {
+output "google_iam_workload_identity_pool_provider_github_name" {
   description = "Workload Identity Pood Provider ID"
-  value       = google_iam_workload_identity_pool_provider.github.id
+  value       = google_iam_workload_identity_pool_provider.github.name
 }
