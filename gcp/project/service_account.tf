@@ -5,12 +5,6 @@ resource "google_service_account" "github_actions" {
   description  = "link to Workload Identity Pool used by github actions"
 }
 
-resource "google_project_iam_member" "github_actions" {
-  project = google_project.this.project_id
-  role    = "roles/editor" // FIXME 本来は個別に権限をふるべき
-  member  = "serviceAccount:${google_service_account.github_actions.email}"
-}
-
 resource "google_service_account_iam_member" "github_actions" {
   service_account_id = google_service_account.github_actions.name
   role               = "roles/iam.workloadIdentityUser"
